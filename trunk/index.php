@@ -5,14 +5,12 @@
  * @author Enrique Place
  */
 
-
-
 /**
  * Definición de directorios
  */
 set_include_path(
     '.' .
-    PATH_SEPARATOR . '../library' .
+    PATH_SEPARATOR . './library' .
     PATH_SEPARATOR . './application/default/models/' .
     PATH_SEPARATOR . get_include_path()
 );
@@ -32,8 +30,8 @@ Zend_Loader::loadClass('Zend_Auth');
 /**
  * Configuración del sistema que será leída del config.ini
  */
-$config_database = new Zend_Config_Ini('./../application/config_system.ini', 'database');
-$config_personalizacion = new Zend_Config_Ini('./../application/config_general.ini', 'personalizacion');
+$config_database = new Zend_Config_Ini('./application/config_system.ini', 'database');
+$config_personalizacion = new Zend_Config_Ini('./application/config_general.ini', 'personalizacion');
 
 // Permite registra de forma pública las instancias de estas variables de
 // configuración
@@ -52,15 +50,15 @@ date_default_timezone_set('America/Montevideo');
  * Setup controller
  */
 $controller = Zend_Controller_Front::getInstance();
-$controller->setControllerDirectory('../application/default/controllers');
+$controller->setControllerDirectory('./application/default/controllers');
 
 /**
  * Todos los módulos que se creen dentro de nuestra aplicación deben de tener
  * una entrada aquí, en el bootstrap
  */
-$controller->addControllerDirectory('../application/frontend/controllers', 'frontend');
-$controller->addControllerDirectory('../application/backend/controllers', 'backend');
-$controller->addControllerDirectory('../application/install/controllers', 'install');
+$controller->addControllerDirectory('./application/frontend/controllers', 'frontend');
+$controller->addControllerDirectory('./application/backend/controllers', 'backend');
+$controller->addControllerDirectory('./application/install/controllers', 'install');
 
 $controller->throwExceptions(false); // should be turned on in development time
 
