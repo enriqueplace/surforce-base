@@ -19,12 +19,12 @@ echo '<?xml version="1.0" encoding="UTF-8" ?>';
 
 <body>
 
-	<h1><?= $this->title ?></h1>
+	<h1><?php echo $this->title ?></h1>
 	
-	<? if ($this->message): ?>
+	<?php if ($this->message): ?>
 		<p>The following error occurred:</p>
-		<?=$this->message ?>
-	<? endif; ?>
+		<?php echo $this->message ?>
+	<?php endif; ?>
 
 </body>
 
