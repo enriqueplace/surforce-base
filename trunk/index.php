@@ -39,6 +39,9 @@ $registry = Zend_Registry::getInstance();
 
 $registry->set('config_sys', $config_sys);
 $registry->set('config_app', $config_app);
+$registry->set('base_path', realpath('.') );
+
+
 
 /**
  * Configuración Base de Datos
