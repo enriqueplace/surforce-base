@@ -26,6 +26,10 @@ Zend_Loader::loadClass('Zend_Registry');
 Zend_Loader::loadClass('Zend_Db');
 Zend_Loader::loadClass('Zend_Db_Table');
 Zend_Loader::loadClass('Zend_Auth');
+Zend_Loader::loadClass('Zend_Session');
+
+// Surforce
+Zend_Loader::loadClass('Zsurforce_Generic_Controller');
 
 /**
  * Configuración del sistema que será leída del config.ini
