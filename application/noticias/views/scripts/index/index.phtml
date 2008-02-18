@@ -1,0 +1,16 @@
+<?php //echo $this->render($this->base_path . DIRECTORY_SEPARATOR . 'html' . DIRECTORY_SEPARATOR . 'header.phtml'); ?>
+<?php //echo $this->render('menu.phtml'); ?>
+
+Hola, son el index de Noticias
+<br><br>
+
+<table border="1">
+    <?php foreach( $this->noticias as $noticia ) : ?>
+        <tr>
+          <td><?php echo $noticia->id ?></td>
+          <td><?php echo $noticia->titulo ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
+<?php echo $this->render('footer.phtml'); ?>
