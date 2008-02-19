@@ -29,5 +29,6 @@ class Noticias_IndexController extends Zsurforce_Generic_Controller{
     function verAction()
     {
     }
+
 }
 ?>
