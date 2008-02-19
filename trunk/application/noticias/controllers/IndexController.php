@@ -4,15 +4,8 @@ require_once 'Zend/Controller/Action.php';
 // FIXME!
 require_once './application/noticias/models/Noticias.php';
 
-class Noticias_IndexController extends Zend_Controller_Action{
+class Noticias_IndexController extends Zsurforce_Generic_Controller{
 
-    function init()
-    {
-
-    }
-    function preDispatch()
-    {
-    }
     function indexAction()
     {
         $noticias = new Noticias();
