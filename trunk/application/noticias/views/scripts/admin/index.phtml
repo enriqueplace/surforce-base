@@ -1,0 +1,26 @@
+<?php echo $this->render('header.phtml'); ?>
+<?php echo $this->render('menu.phtml'); ?>
+
+<?php if(sizeof($this->noticias)>0): ?>
+	<table border="1">
+		<tr>
+			<th>Identificador</th>
+			<th>T&iacute;tulo</th>
+			<th>Acciones</th>
+		</tr>
+	<?php foreach( $this->noticias as $noticia ) : ?>
+		<tr>
+			<td><?php echo $noticia->id ?></td>
+			<td><?php echo $noticia->titulo ?></td>
+			<td>
+				<a href="<?php echo $this->baseUrl ?>/noticias/admin/modificar/id/<?php echo $noticia->id ?>">Modificar</a>
+				<a href="<?php echo $this->baseUrl ?>/noticias/admin/eliminar/id/<?php echo $noticia->id ?> ">Eliminar</a>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php else: ?>
+	No existen Noticias actualmente.
+<?php endif; ?>
+<a href="<?php echo $this->baseUrl ?>/noticias/admin/agregar">Agregar Noticia</a>
+<?php echo $this->render('footer.phtml'); ?>
