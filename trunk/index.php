@@ -72,9 +72,23 @@ $controller->setControllerDirectory('./application/default/controllers');
 
 /*
  * Todos los módulos que se creen dentro de nuestra aplicación deben de tener
- * una entrada aquí, en el bootstrap
+ * una entrada aquí, en el bootstrap.
+ * 
+ * Por ejemplo, si copiamos un módulo del proyecto surforce-modules en nuestro 
+ * proyecto, deberá crearse una nueva línea que especifique donde encontrar el 
+ * controller que maneja toda la acción del módulo.
+ * 
+ * Nota: el módulo noticias verdadero debe tomarse del proyecto surforce-modules, 
+ * ya que se agregó temporalmente a surforce-base para poder hacer pruebas. 
  */
+
+// Módulos de surforce-modules
 $controller->addControllerDirectory('./application/noticias/controllers', 'noticias');
+//$controller->addControllerDirectory('./application/contacto/controllers', 'contacto');
+//$controller->addControllerDirectory('./application/faqs/controllers', 'faqs');
+//$controller->addControllerDirectory('./application/paginas/controllers', 'paginas');
+//$controller->addControllerDirectory('./application/usuarios/controllers', 'usuarios');
+//$controller->addControllerDirectory('./application/contacto/contactoskype', 'contactoskype');
 
 $controller->throwExceptions(false); // should be turned on in development time
 
