@@ -1,25 +1,29 @@
+<?php
+
+/**
+ * Default home page view
+ *  
+ * @author
+ * @version
+ */
+
+echo '<?xml version="1.0" encoding="UTF-8" ?>';
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>New Zend Framework Project</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>New Zend Framework Project</title>
 </head>
 
 <body>
-    Hello, world!<br />
-
-    Bienvenido a la página por defecto.
-
-
-  <ul>
-    <li><a href="noticias/">Modulo Noticias</a><br />
-    </li>
-    <li><a href="noticias/admin">Modulo Noticias Administraci&oacute;n</a><br />
-    </li>
-
-  </ul>
-
+	Hello, world!
+	
+	Este es el módulo por defecto: application/default<br> 
+	
+	Existe un módulo de pruebas que responde en <a href="<?php echo $this->baseUrl ?>/noticias/">/noticias/</a>
 </body>
 
 </html>

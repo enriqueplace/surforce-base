@@ -9,7 +9,7 @@
 
 require_once 'Zend/Controller/Action.php';
 
-class IndexController extends Zend_Controller_Action 
+class IndexController extends Zsurforce_Generic_Controller 
 {
 	/**
 	 * The default action - show the home page
