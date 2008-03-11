@@ -19,11 +19,28 @@ echo '<?xml version="1.0" encoding="UTF-8" ?>';
 </head>
 
 <body>
-	Hello, world!
+
+	<div style="width: 500px">
 	
-	Este es el módulo por defecto: application/default<br> 
-	
-	Existe un módulo de pruebas que responde en <a href="<?php echo $this->baseUrl ?>/noticias/">/noticias/</a>
+		Este es el famoso <strong>"Hello, world!"</strong> y se está ejecutando el módulo por defecto: <a href="<?php echo $this->baseUrl ?>/default/"">application/default</a><br> 
+		
+		<p>Para reusar un módulo existente, hay que bajar el proyecto <a href="http://code.google.com/p/surforce-modules">surforce-modules</a> y 
+		"exportar" por svn (no copiar) los módulos al directorio "application", posteriormente reconstruir la 
+		tabla que necesita para trabajar (si es que el sistema ya no la incluye, o directamente no use base de datos).
+		
+		<p>Por ejemplo, si exportamos el módulo "noticias" deberemos crear la tabla "noticias" (en 
+		el directorio "sql" está su estructura) y posteriormente ejecutar usando la siguiente nomenclatura 
+		para la url:
+		
+		<div>http://localhost/aplicacion/modulo</div>
+		
+		<p>Por ejemplo:
+		
+		<div>http://localhost/surforce-base/noticias</div>
+		
+		<p>Si ya está instalado, debería funcionar con este enlace <a href="<?php echo $this->baseUrl ?>/noticias/">/noticias/</a>
+		
+	</div>
 </body>
 
 </html>
