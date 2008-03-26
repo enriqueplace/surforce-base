@@ -29,7 +29,8 @@ Zend_Loader::loadClass('Zend_Auth');
 Zend_Loader::loadClass('Zend_Session');
 
 // Surforce
-Zend_Loader::loadClass('Zsurforce_Generic_Controller');
+if(Zend_Loader::isReadable('Zsurforce/Generic/Controller.php'))
+	Zend_Loader::loadClass('Zsurforce_Generic_Controller');
 
 /**
  * Configuración del sistema que será leída del config.ini
