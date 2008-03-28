@@ -1,0 +1,33 @@
+body	{
+	font: 8pt Tahoma;
+	margin: 5px;
+	paddgin: 0;
+}
+a:link	{color: #196DB6;}
+a:visited	{color: #1E7F8B;}
+a:hover	{text-decoration: none;}
+
+div#header{
+	clear:both;
+	width: 100%;
+}
+div#menu{
+	float:left;
+	width: 150px;
+}
+div#main{
+	width: 81%;
+	float: left;
+	border-left: 1px solid #a8a9ac;	
+	padding: 10px 0 0 5px;
+	margin-bottom: 20px;
+	
+}
+div#footer{
+	color: #808080;
+	border-top: 1px dashed #a8a9ac;
+	margin-top: 20px;
+	padding-top: 5px; 
+	clear:both;
+	text-align:right;
+}

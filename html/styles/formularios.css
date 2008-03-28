@@ -1,0 +1,73 @@
+form	{
+	margin: 0; 
+	padding: 0;
+	color:#888;
+}
+form 	{
+	border-bottom: 1px solid #a8a9ac;
+
+}
+
+form  label	{
+	position: relative;
+}
+
+form  input {
+	font: 8pt Tahoma;
+	width: 300px;
+	border: 1px solid #a8a9ac;
+	padding: 2px;
+	position: relative;
+	color: #888;
+}
+
+form  textarea	{
+	font: 8pt Tahoma;
+	width: 300px;
+	height: 200px;
+	border: 1px solid #a8a9ac;
+	padding: 2px;
+	color: #888;	
+}
+
+form  select {
+	font: 8pt Tahoma;
+	width: 305px;
+	border: 1px solid #a8a9ac;
+	padding: 2px;
+	color: #888;	
+}
+
+form  input.submit	{
+	background: #f0f0f0;
+}
+
+
+
+form div tinytext	label {
+	position: relative;
+	top: 0;
+	left: 5px;
+	display: block;
+}
+
+form div tinytext	textarea	{
+	width:600px;
+	height:300px;
+}
+form div tinytext	table.mceEditor	{
+	width: 600px;
+	height: 300px;
+	margin: 0 0 0 150px;
+}
+
+form div tinytext select	{
+	width: auto;
+	margin: 0;
+	position: relative;
+	top:0;
+	left: 0;
+}
+form	select.monedas{
+	width: 10px;
+}
