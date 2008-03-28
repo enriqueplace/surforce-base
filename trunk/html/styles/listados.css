@@ -1,0 +1,92 @@
+/*---------------------------------------------------------------------------------------*/
+
+/* listados */
+/*---------------------------------------------------------------------------------------*/
+
+table {
+	width: 95%;
+	margin: 10px;
+}
+
+img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+table tr.header td	{
+	background: #f0f0f0;
+	font-weight: bold;
+	color: #808080;
+	padding: 2px;
+}
+
+table tr.data0 td	{
+	background: #fff;
+	color: #808080;
+	padding: 2px;
+	border-bottom: 1px solid #c4c4c4;
+}
+
+table tr.data1 td	{
+	background: #fafafa;
+	color: #808080;
+	padding: 2px;
+	border-bottom: 1px solid #c4c4c4;
+}
+
+form.busq	{
+	background: #f0f0f0;
+	height: 40px;
+}
+
+form.busq label	{
+	position: relative;
+	left: -160px;
+	top: 10px;
+	_top: 5px;
+}
+
+form.busq input {
+	font: 8pt Tahoma;
+	width: 200px;
+	border: 1px solid #c4c4c4;
+	padding: 2px;
+	position: relative;
+	left: 100px;
+	top: 10px;
+	_top: 5px;
+}
+
+form.busq input.submit	{
+	width: 120px;
+	left: 90px;
+	background: #f0f0f0;
+}
+
+
+div#paginado	{
+	width:95%;
+	margin: 0 0 10px 10px;
+	text-align:center;
+	font-family: Tahoma;
+	font-size: 8pt;
+	vertical-align: middle;
+	padding: 5px 0;
+	color: #888;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;			
+	background: #fcfcfc;
+}
+
+div#paginado a:hover	{
+	color: #000;
+}
+div#paginado a.pagactual{
+	font-weight: bold;
+}
+
+		
+		
+		
+		

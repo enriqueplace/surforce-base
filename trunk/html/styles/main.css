@@ -1,0 +1,21 @@
+div#main h1	{
+	font: bold 14pt Tahoma;
+	color: #196DB6;
+}
+
+div#main p	{
+	color: #888;
+}
+#main	div.error	{
+	display:none;
+	font: 8pt Tahoma;
+	border: 1px dashed #a8a9ac;
+	background: #f0f0f0 url(./html/images/alerta.gif) no-repeat 0 25px;
+	padding: 10px;
+	margin: 10px;
+	color: #a8a9ac;
+}
+hr	{
+	margin: 0; 
+	padding:0;
+}
