@@ -13,7 +13,8 @@ div#header{
 }
 div#menu{
 	float:left;
-	width: 150px;
+	width:150px;
+	height:500px;
 }
 div#main{
 	width: 81%;
@@ -21,7 +22,6 @@ div#main{
 	border-left: 1px solid #a8a9ac;	
 	padding: 10px 0 0 5px;
 	margin-bottom: 20px;
-	
 }
 div#footer{
 	color: #808080;
