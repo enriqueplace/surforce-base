@@ -57,7 +57,6 @@ define('APP_PATH', realpath('.'));
 Zend_Layout::startMvc(array(
     'layoutPath' => APP_PATH . '/html/scripts'
 ));
-//Let's assign our imaginary base url in the view so we can refer to it:
 $view = Zend_Layout::getMvcInstance()->getView();
 
 /**
