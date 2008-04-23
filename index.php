@@ -27,10 +27,13 @@ Zend_Loader::loadClass('Zend_Db');
 Zend_Loader::loadClass('Zend_Db_Table');
 Zend_Loader::loadClass('Zend_Auth');
 Zend_Loader::loadClass('Zend_Session');
+Zend_Loader::loadClass('Zend_Layout');
 
 // Surforce
-if(Zend_Loader::isReadable('Zsurforce/Generic/Controller.php'))
+if(Zend_Loader::isReadable('Zsurforce/Generic/Controller.php')){
 	Zend_Loader::loadClass('Zsurforce_Generic_Controller');
+	Zend_Loader::loadClass('Zsurforce_Generic_ControllerAdmin');
+}
 
 /**
  * Configuración del sistema que será leída del config.ini
@@ -46,7 +49,16 @@ $registry->set('config_sys', $config_sys);
 $registry->set('config_app', $config_app);
 $registry->set('base_path', realpath('.') );
 
+/**
+ * Zend_Layout
+ */
+define('APP_PATH', realpath('.'));
 
+Zend_Layout::startMvc(array(
+    'layoutPath' => APP_PATH . '/html/scripts'
+));
+//Let's assign our imaginary base url in the view so we can refer to it:
+$view = Zend_Layout::getMvcInstance()->getView();
 
 /**
  * Configuración Base de Datos
@@ -74,13 +86,13 @@ $controller->setControllerDirectory('./application/default/controllers');
 /*
  * Todos los módulos que se creen dentro de nuestra aplicación deben de tener
  * una entrada aquí, en el bootstrap.
- * 
- * Por ejemplo, si copiamos un módulo del proyecto surforce-modules en nuestro 
- * proyecto, deberá crearse una nueva línea que especifique donde encontrar el 
+ *
+ * Por ejemplo, si copiamos un módulo del proyecto surforce-modules en nuestro
+ * proyecto, deberá crearse una nueva línea que especifique donde encontrar el
  * controller que maneja toda la acción del módulo.
- * 
- * Nota: el módulo noticias verdadero debe tomarse del proyecto surforce-modules, 
- * ya que se agregó temporalmente a surforce-base para poder hacer pruebas. 
+ *
+ * Nota: el módulo noticias verdadero debe tomarse del proyecto surforce-modules,
+ * ya que se agregó temporalmente a surforce-base para poder hacer pruebas.
  */
 
 // Módulos de surforce-modules
