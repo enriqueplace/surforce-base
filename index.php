@@ -10,30 +10,18 @@
  */
 set_include_path(
     '.' .
-    PATH_SEPARATOR . './library' .
-    PATH_SEPARATOR . './application/default/models/' .
+    PATH_SEPARATOR . './library/' .
+    PATH_SEPARATOR . './application/' .
     PATH_SEPARATOR . get_include_path()
 );
 
 /**
  * Carga de clases que se usan constantemente
+ * Nota: carga a demanda
  */
 
 include "Zend/Loader.php";
-Zend_Loader::loadClass('Zend_Controller_Front');
-Zend_Loader::loadClass('Zend_Config_Ini');
-Zend_Loader::loadClass('Zend_Registry');
-Zend_Loader::loadClass('Zend_Db');
-Zend_Loader::loadClass('Zend_Db_Table');
-Zend_Loader::loadClass('Zend_Auth');
-Zend_Loader::loadClass('Zend_Session');
-Zend_Loader::loadClass('Zend_Layout');
-
-// Surforce
-if(Zend_Loader::isReadable('Zsurforce/Generic/Controller.php')){
-	Zend_Loader::loadClass('Zsurforce_Generic_Controller');
-	Zend_Loader::loadClass('Zsurforce_Generic_ControllerAdmin');
-}
+Zend_Loader::registerAutoload();
 
 /**
  * Configuración del sistema que será leída del config.ini
@@ -102,10 +90,17 @@ $controller->addControllerDirectory('./application/noticias/controllers', 'notic
 //$controller->addControllerDirectory('./application/usuarios/controllers', 'usuarios');
 //$controller->addControllerDirectory('./application/contacto/contactoskype', 'contactoskype');
 
-$controller->throwExceptions(false); // should be turned on in development time
+$controller->throwExceptions(true); // should be turned on in development time
 
 // run!
-$controller->dispatch();
+// Se atrapan las  excepciones y en caso de existir alguna se muestran
+// separadas por lineas.
+try {
+	$controller->dispatch();
+} catch(Exception $e) {
+	echo nl2br($e->__toString());
+}
+
 
 /**
  * En el bootstrap (index.php) recomiendan por debug que no se cierre con el tag
