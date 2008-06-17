@@ -1,3 +1,7 @@
+﻿[general]
+debug    = on
+timezone = "America/Montevideo"
+
 [database]
 db.adapter = PDO_MYSQL
 db.config.host = localhost
