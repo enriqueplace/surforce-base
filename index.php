@@ -108,7 +108,8 @@ $controller->setControllerDirectory('./application/default/controllers');
 //$controller->addControllerDirectory('./application/usuarios/controllers', 'usuarios');
 //$controller->addControllerDirectory('./application/contacto/contactoskype', 'contactoskype');
 
-$controller->throwExceptions(true); // should be turned on in development time
+/* Habilitar en tiempo de desarrollo */
+$controller->throwExceptions($config_sys->debug); 
 
 /* run!
  * Se atrapan las  excepciones y en caso de existir alguna se muestran

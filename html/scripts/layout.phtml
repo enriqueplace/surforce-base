@@ -1,9 +1,10 @@
+<?php echo '<?xml version="1.0" encoding="UTF-8" ?> '; ?>
+<?php echo $this->doctype('XHTML1_TRANSITIONAL'); ?>
+
 <?php echo $this->render('header.phtml'); ?>
+
 <?php echo $this->render('menu.phtml'); ?>
 
 <?php echo $this->layout()->content; ?>
 
-<?php echo $this->render('footer.phtml');
-
-$this->headTitle('Prueba');
-?>
+<?php echo $this->render('footer.phtml');?>
