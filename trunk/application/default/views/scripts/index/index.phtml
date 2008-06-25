@@ -1,16 +1,14 @@
-<div id="main">
-	Este es el famoso <strong>"Hello, world!"</strong> y se está ejecutando el módulo por defecto: <a href="<?php echo $this->baseUrl ?>/default/"">application/default</a><br/>
-	<p>Para reusar un módulo existente, hay que bajar el proyecto <a href="http://code.google.com/p/surforce-modules">surforce-modules</a> y
-	"exportar" por svn (no copiar) los módulos al directorio "application", posteriormente reconstruir
-	en la base de datos la tabla que necesita para trabajar (si es que el sistema ya no la incluye, o directamente no use base de datos).
-	<p>Por ejemplo, si exportamos el módulo "noticias" deberemos crear la tabla "noticias" (en
-	el directorio "sql" está su estructura) y posteriormente ejecutar usando la siguiente nomenclatura
-	para la url:
-	<div>http://localhost/aplicacion/modulo</div>
+<?php
 
-	<p>Por ejemplo:
+/**
+ * Default home page view
+ *  
+ * @author
+ * @version
+ */
 
-	<div>http://localhost/surforce-base/noticias</div>
+$this->headTitle('New Zend Framework Project');
+$this->placeholder('title')->set('Welcome');
+?>
 
-	<p>Si ya está instalado, debería funcionar con este enlace <a href="<?php echo $this->baseUrl ?>/noticias/">/noticias/</a>
-</div>
+Hello, world!

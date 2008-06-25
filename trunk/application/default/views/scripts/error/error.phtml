@@ -7,25 +7,11 @@
  * @version
  */
 
-echo '<?xml version="1.0" encoding="UTF-8" ?>';
+$this->headTitle('Error Page');
+$this->placeholder('title')->set($this->title);
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Error Page</title>
-</head>
-
-<body>
-
-	<h1><?= $this->title ?></h1>
-	
-	<? if ($this->message): ?>
-		<p>The following error occurred:</p>
-		<?=$this->message ?>
-	<? endif; ?>
-
-</body>
-
-</html>
+<?php if ($this->message): ?>
+	<p>The following error occurred:</p>
+	<?php echo $this->message ?>
+<?php endif; ?>
