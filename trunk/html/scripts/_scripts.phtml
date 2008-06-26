@@ -1,0 +1,40 @@
+<script src="http://www.google.com/jsapi"></script>
+
+<?php if( isset($this->prototype) && $this->prototype) :?>
+	<script> google.load("prototype", "1.6");</script>
+<?php endif; ?>
+
+<?php if( isset($this->scriptaculous) && $this->scriptaculous) :?>
+	<script>google.load("prototype", "1.6");</script>
+	<script>google.load("scriptaculous", "1.8.1");</script>
+<?php endif; ?>
+
+<?php if( isset($this->jquery) && $this->jquery) :?>
+	<script>google.load("jquery", "1.2.3");</script>
+<?php endif; ?>
+
+<?php if( isset($this->mootools) && $this->mootools) :?>
+	<script>google.load("mootools", "1.11");</script>
+<?php endif; ?>
+
+<?php if( isset($this->dojo) && $this->dojo) :?>
+	<script>google.load("dojo", "1.1.1");</script>
+<?php endif; ?>
+
+<?php if( isset($this->lightbox) && $this->lightbox) :?>
+	<script>google.load("mootools", "1.11");</script>
+	<script src="<?php echo $this->baseUrl;?>/html/scripts/lightbox/lightbox.js" type="text/javascript"></script>	
+	<script type="text/javascript">
+			window.addEvent('domready',function(){
+				Lightbox.init({descriptions: '.lightboxDesc', showControls: true});
+			});
+		</script>	
+<?php endif; ?>
+
+<?php if( isset($this->fvalidator) && $this->fvalidator) :?>
+	<script src="<?php echo $this->baseUrl;?>/html/clientScripts/mootools/fvalidator.js" type="text/javascript"></script>
+<?php endif; ?>
+<?php if( isset($this->calendar) && $this->calendar) :?>	
+	<script src="<?php echo $this->baseUrl;?>/html/clientScripts/mootools/calendar.js" type="text/javascript"></script>
+<?php endif; ?>
+<script src="<?php echo $this->baseUrl;?>/html/clientScripts/site.js" type="text/javascript"></script>

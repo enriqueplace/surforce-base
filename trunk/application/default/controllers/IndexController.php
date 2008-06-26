@@ -17,6 +17,7 @@ class IndexController extends Zsurforce_Generic_Controller
     public function indexAction() 
     {
         // TODO Auto-generated IndexController::indexAction() action
-        $this->view->headTitle('SURFORCE-BASE');
+        $this->view->headTitle('SURFORCE-BASE');        
+        $this->view->scriptaculous = TRUE;
     }
 }
